@@ -1,0 +1,173 @@
+{
+	"id": "8854848a-2d70-454d-91ba-6d0dd1e2ba40",
+	"name": "[inst] Lab1",
+	"timestamp": "2021-10-09T16:16:33.498Z",
+	"collection_id": "14520151-b2dabfc2-2dd4-42b1-823d-a6b32f7343c5",
+	"folder_id": 0,
+	"environment_id": "4722b8d5-130e-4b1f-bacc-ef484984988f",
+	"totalPass": 4,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "fa6439f7-f283-4ab1-9601-e31a6914f3c6",
+			"name": "Create new Person",
+			"url": "http://localhost:8000/api/v1/persons",
+			"time": 19,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Get personId from location header": true
+			},
+			"testPassFailCounts": {
+				"Get personId from location header": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Get personId from location header": true
+				}
+			]
+		},
+		{
+			"id": "bff2d393-319c-457b-b4aa-c2c1127d56d3",
+			"name": "Get Persons by ID",
+			"url": "http://localhost:8000/api/v1/persons/17",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check Person": false
+			},
+			"testPassFailCounts": {
+				"Check Person": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Check Person": false
+				}
+			]
+		},
+		{
+			"id": "78d2ad36-2b78-4ce0-a6e1-d7012f587f4a",
+			"name": "Get all Persons",
+			"url": "http://localhost:8000/api/v1/persons",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check Person exists in response": true
+			},
+			"testPassFailCounts": {
+				"Check Person exists in response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Check Person exists in response": true
+				}
+			]
+		},
+		{
+			"id": "87504606-6308-489a-8867-b92d128268c4",
+			"name": "Update Person by ID",
+			"url": "http://localhost:8000/api/v1/persons/17",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check Person updated": true
+			},
+			"testPassFailCounts": {
+				"Check Person updated": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Check Person updated": true
+				}
+			]
+		},
+		{
+			"id": "4d1e80bd-cbe0-45e9-8e9d-1ad5aeedd900",
+			"name": "Remove Person by ID",
+			"url": "http://localhost:8000/api/v1/persons/17",
+			"time": 13,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Check Person removed": true
+			},
+			"testPassFailCounts": {
+				"Check Person removed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Check Person removed": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 72,
+	"collection": {
+		"requests": [
+			{
+				"id": "fa6439f7-f283-4ab1-9601-e31a6914f3c6",
+				"method": "POST"
+			},
+			{
+				"id": "bff2d393-319c-457b-b4aa-c2c1127d56d3",
+				"method": "GET"
+			},
+			{
+				"id": "78d2ad36-2b78-4ce0-a6e1-d7012f587f4a",
+				"method": "GET"
+			},
+			{
+				"id": "87504606-6308-489a-8867-b92d128268c4",
+				"method": "PATCH"
+			},
+			{
+				"id": "4d1e80bd-cbe0-45e9-8e9d-1ad5aeedd900",
+				"method": "DELETE"
+			}
+		]
+	}
+}

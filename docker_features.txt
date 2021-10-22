@@ -1,0 +1,15 @@
+cmd wsl --shutdown
+
+python manage.py test person
+
+получить ID контейнера
+docker ps -aqf "name=rsoi-2021-lab1-ci-cd-mshat"
+открыть лог по ИД
+docker  logs -f 32c324da8001
+
+venv\scripts\activate.bat
+docker-compose up -d --build
+docker-compose exec web python manage.py makemigrations
+docker-compose exec web python manage.py makemigrations person
+docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py createsuperuser
