@@ -18,12 +18,12 @@ RUN apk update \
 
 # install dependencies
 RUN pip install --upgrade pip
-COPY ./django-on-docker/requirements.txt .
+COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
 # copy project
-COPY ./django-on-docker .
+COPY . .
 
-RUN python3 manage.py makemigrations person
-RUN python3 manage.py migrate
-CMD python3 manage.py runserver  0.0.0.0:$PORT
+# RUN python3 manage.py makemigrations person
+# RUN python3 manage.py migrate
+# CMD python3 manage.py runserver  0.0.0.0:$PORT
